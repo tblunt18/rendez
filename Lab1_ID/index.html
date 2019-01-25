@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--<link rel="stylesheet" type="text/css" href="style.css"> -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
+    <style>
+
+    </style>
+</head>
+<body>
+<header>
+    <div class=" hide-on-small-and-down">
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo black-text small"><img style="width:50px;height:50px" src="images/coconut%20(1).png"></a>
+                <ul id="nav-mobile" class="right hide-on-small-and-down">
+
+                    <li><a class="black-text" href="" style="font-family:Didot;font-size:25px">Rendez</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- parallax 1 -->
+<div class="parallax-container">
+    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <div>
+        <h1 class="white-text left-align" style="font-family:Didot;position:relative;top:50px;">The best trips start <br> with inspiration.</h1>
+
+    </div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header center" style="font-family:Didot">So...where to? </h2>
+        <h5 class="grey-text text-darken-3 lighten-3 " style="font-family:Didot">Rendez is dedicated to grabbing the top content for you.
+        With our advanced searches, you can find the best videos in half the time. With just a few button clicks, you'll be grabbing
+            inspiration from vlogs and vacations that will guide you.</h5>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="https://images.pexels.com/photos/1655166/pexels-photo-1655166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
+    <div class="row">
+        <div style="position:relative;top:100px">
+
+            <div class="col s12 m4 l4 pull">
+
+                <ul class="collapsible">
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Season</div>
+                        <div class="collapsible-body"><span class="white-text">Hey cutie, choose a season.<br><br></span>
+                            <div class="collection">
+                                <a id="summer" href="#!summer" onclick="addActive('#summer')" class="collection-item active">Summer</a>
+                                <a id="winter" href="#!winter" onclick="addActive('#winter')" class="collection-item ">Winter</a>
+                                <a id="spring" href="#!spring" onclick="addActive('#spring')" class="collection-item">Spring</a>
+                                <a id="fall" href="#!fall" onclick="addActive('#fall')" class="collection-item">Fall</a>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col s12 m4 l4">
+
+                <div class="card-panel white">
+                    <span class="black-text" style="font-family:Didot">The process is simple. Just choose a season from the drop down,
+                        followed by the occasion and audience size. From here, we'll look for videos that fit. <br> <br>
+                    </span>
+                    <div class="center"><a class="waves-effect waves-light btn" onclick="runQuery()">Ready</a></div>
+
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <ul class="collapsible">
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Occasion</div>
+                        <div class="collapsible-body"><span>What's up? <br><br></span>
+                            <div class="collection">
+                                <a id="anniv" href="#!summer" onclick="addActive2('#anniv')" class="collection-item active">Anniversary</a>
+                                <a id="date" href="#!winter" onclick="addActive2('#date')" class="collection-item ">First date</a>
+                                <a id="vaca" href="#!spring" onclick="addActive2('#vaca')" class="collection-item">Vacation</a>
+                                <a id="rand" href="#!fall" onclick="addActive2('#rand')" class="collection-item">Random</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- parallax 3 -->
+<div id="para3" class="parallax-container">
+    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <h4 style="font-family: Didot"> Vids by the Season</h4>
+    <div id="search-container" class="row">
+        <!--<div class="s12 m4 l4" style="z-index:1000 !important">
+            <iframe id="myIframe" width="360" height="215" src="" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
+        </div>-->
+    </div>
+</div>
+<!-- parallax 4 -->
+<div id="para4" class="parallax-container">
+    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <h4 style="font-family: Didot"> Vids by the Occasion </h4>
+    <div>
+        <div id="search-container2" class="row">
+            <!--<div class="s12 m4 l4" style="z-index:1000 !important">
+                <iframe id="myIframe" width="360" height="215" src="" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!-- parallax 5 -->
+<div id="para5" class="parallax-container">
+    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <h4 style="font-family: Didot"> Vids by the Occasion </h4>
+    <div>
+        <div id="search-container3" class="row">
+            <!--<div class="s12 m4 l4" style="z-index:1000 !important">
+                <iframe id="myIframe" width="360" height="215" src="" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
+            </div>-->
+        </div>
+    </div>
+</div>
+<div id=""></div>
+<script>
+    $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.collapsible').collapsible();
+    });
+</script>
+
+
+
+
+
+
+<!--
+<div class="container">
+    <img class="homeImg" src="https://youngisland.com/wp-content/uploads/2018/01/aerial-optimized2.jpg" alt="Snow" style="width:100%;">
+    <div style="font-size:25px" class="top-right text">Rendez</div>
+    <div class="top-left" style="width:390px;font-size:50px;font-family:Didot;top:100px;"><p align="left">An anniversary. <br>A first date.<br> A getaway.</p></div>
+    <div class="top-left">Logo will go here</div>
+
+    <div class="outerBoxhome centered">
+        <p style="color:white;font-size:20px" class="text">Scroll for Inspiration</p>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="parallax1">
+        <p class="centered sections">Rendez helps you find destination inspiration. <br> Begin your travel fixation!</p>
+        <div class="sectionImg top-left" style="left:220px !important; top:45px !important">
+            <img src="images/coconut%20(1).png">
+            <p class="top-left" style="color:black;position:relative;top:110px;left:-15px">Influencer eats</p>
+            <p class="top-left" style="color:black;position:relative;top:110px;left:-15px">Influencer eats</p>
+        </div>
+        <div class="sectionImg centered" style="top: 80px !Important;">
+            <img style="float:left" src="images/gps%20(1).png">
+        </div>
+        <div class="sectionImg top-right" style="right:220px !important;top:45px !important">
+            <img style="float:left" src="images/coffee.png">
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="parallax2">
+        <p class="centered">So I'm a paragraph</p>
+        <button type="button" id="getvid" >Generate feed</button>
+        <h4>Latest Videos</h4>
+
+        <div id="search-container" style="z-index:1000 !important">
+            <!--<iframe id="myIframe" width="560" height="315" src="hgf" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
+        </div>
+
+    </div>
+
+</div>
+-->
+<script>
+    var currSeason;
+    var currOccasion;
+    $(document).ready(function() {
+        //$(document).on('click', '#getvid', searchByKeyword());
+        //$("#getvid").click(searchByKeyword());
+
+
+        // GetRandomBackground();
+        // Load the pexels api
+        // UsePexelsAPI();
+        initialSetup();
+
+    });
+
+    function runQuery(){
+        // Loads the JavaScript client library and invokes `start` afterwards.
+        gapi.load('client', {
+            callback: function() {
+                // Handle gapi.client initialization.
+                //initGapiClient();
+                UseGoogleAPI();
+            },
+            onerror: function() {
+                // Handle loading error.
+                alert('gapi.client failed to load!');
+            },
+            timeout: 5000, // 5 seconds.
+            ontimeout: function() {
+                // Handle timeout.
+                alert('gapi.client could not load in a timely manner!');}
+
+        });
+    }
+    function addActive(id){
+        $('#summer').removeClass("active").removeClass("thisSeason");
+        $('#winter').removeClass("active").removeClass("thisSeason");
+        $('#spring').removeClass("active").removeClass("thisSeason");
+        $('#fall').removeClass("active").removeClass("thisSeason");
+        $(id).addClass("active");
+        $(id).addClass("thisSeason");
+        currSeason = id;
+    }
+    function addActive2(id){
+        $('#anniv').removeClass("active").removeClass("thisOcc");
+        $('#date').removeClass("active").removeClass("thisOcc");
+        $('#vaca').removeClass("active").removeClass("thisOcc");
+        $('#rand').removeClass("active").removeClass("thisOcc");
+        $(id).addClass("active");
+        $(id).addClass("thisOcc");
+        currOccasion = id;
+    }
+    function initialSetup(){
+        $('#para3').hide();
+        $('#para4').hide();
+    }
+
+    function UseGoogleAPI() {
+        // Initializes the client with the API key YouTube api SIMPLE ACCESS
+        gapi.client.init({
+            'apiKey': 'AIzaSyAv5TMeMSZOaVHqGXPH4OG-svgWm8-bq5I',
+            'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest']
+        }).then(function() {
+            // Executes an API request, and returns a Promise.
+            var q = currSeason;
+            var b = currOccasion;
+            console.log("current query: "+q);
+            var q2 = $('.thisOcc').val();
+            var seasons = ['#winter','#summer','#spring','#fall'];
+            var winterQuery = ['winter travel', 'winter trip', 'winter vacation vlog'];
+            var summerQuery = ['summer travel', 'summer trip', 'summer vacation vlog'];
+            var springQuery = ['spring travel', 'spring trip', 'spring vacation vlog'];
+            var fallQuery = ['fall travel', 'fall trip', 'fall vacation vlog'];
+
+
+            var i = 0;
+            var i2 = 0;
+            var index = 0;
+
+                if (q === seasons[0]) {
+                    console.log("winter query: "+q);
+                    processQueries(winterQuery,'#search-container');
+                    occasionQuery(b);
+
+                }
+                else if (q === seasons[1]){
+                    console.log("summer query: "+q);
+                    processQueries(summerQuery,'#search-container');
+                    occasionQuery(b);
+                }
+                else if (q === seasons[2]){
+                    console.log("spring query: "+q);
+                    processQueries(springQuery,'#search-container');
+                    occasionQuery(b);
+                }
+                else{
+                    console.log("fall query: "+q);
+                    processQueries(fallQuery,'#search-container');
+                    occasionQuery(b);
+                }
+                i2 += 1;
+
+
+
+        })
+    }
+    function occasionQuery(b){
+        var annivQuery = ['anniversary date', 'anniversary trip', 'anniversary travel'];
+        var dateQuery = ['date night abroad','travel date night','first date'];
+        var vacaQuery = ['vacation vlog','vacation travel','vacation'];
+        var anyQuery = ['places to travel','travel abroad','travel vlog'];
+
+        if (b === '#anniv'){
+            processQueries(annivQuery,'#search-container2');
+        }
+        else if (b === '#date'){
+            processQueries(dateQuery,'#search-container2');
+        }
+        else if (b === '#vaca'){
+            processQueries(vacaQuery,'#search-container2');
+        }
+        else{
+            // rand
+            processQueries(anyQuery,'#search-container2');
+        }
+    }
+    function processQueries(queries,container){
+        var index = 0;
+        var idLoop = 0;
+        while (index < queries.length) {
+            var request = gapi.client.youtube.search.list({
+                q: queries[index],
+                maxResults: 2,
+                part: 'snippet'
+            });
+
+            request.execute(function (response) {
+                var str = JSON.stringify(response.result);
+                //$('#search-container').html('<pre>' + str + '</pre>');
+
+                const playListItems = response.result.items;
+                console.log(playListItems);
+                // check to see that there are items
+                if (playListItems) {
+                    //var idLoop = 0;
+
+                    // loop through videos to append output
+                    playListItems.forEach(function (item) {
+                        var videoId = item.id.videoId;
+                        console.log('video id: ' + videoId);
+                        var url = "https://www.youtube.com/embed/" + videoId;
+                        $(container).append('<div class="col s12 m4 l4"><iframe id="myIframe" width="360" height="215" src="hgf" frameborder="0" allow="accelerometer; encrypted-media; " ></iframe></div>');
+                        setTimeout(3000);
+                        document.getElementById("myIframe").src = url;
+                        document.getElementById("myIframe").id = "id" + idLoop;
+
+                        idLoop = idLoop + 1;
+
+                    });
+                    $('#para3').show();
+                    $('#para4').show();
+
+                }
+                else {
+                    $('#search-container').html("No Videos to Display");
+                }
+            });
+            index += 1;
+        }
+    }
+    function UsePexelsAPI(){
+
+        //Require Wrapper Library
+        const PexelsAPI = require('pexels-api-wrapper');
+
+        //Create Client instance by passing in API key
+        var pexelsClient = new PexelsAPI("563492ad6f91700001000001402af010d6064adabbb53fcea3831997");
+
+        //Search API
+        pexelsClient.search("food", 10, 1)
+            .then(function(result){
+                console.log('pexels '+ result);
+            }).
+        catch(function(e){
+            console.err(e);
+        });
+    }
+
+    function GetRandomBackground()
+    {
+        var app_id = ' f4124a4275f30242782a93336f72381927b7d5a7da7ad5a697af8635b2d9c850';
+        var url = 'https://api.unsplash.com/photos/random?client_id=' + app_id;
+        //var url = 'https://source.unsplash.com/300x300/?nature,water';
+        $.ajax({
+            url: url,
+            dataType: 'json',
+            success: function(json) {
+                console.log("before the display");
+                var src = json.urls.regular;
+                $('#selector').css('background-image','url('+src+')').css('background-size','cover');
+                console.log("after the display");
+            }
+        });
+    }
+
+
+</script>
+
+<footer>
+    <p>Copyright 2019 Keria Blunt</p>
+</footer>
+
+</body>
+</html>

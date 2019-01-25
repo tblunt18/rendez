@@ -1,0 +1,144 @@
+.text{
+    font-family:Didot;
+
+}
+.sections{
+    font-family:Didot;
+    font-size: 25px;
+    top: 30px !important;
+    color: black;
+}
+.sectionImg img{
+    float:left;
+    width: 70px;
+    height: 70px;
+    top: 100px !important;
+    position:relative !important;
+}
+
+.homeImg{
+    height:100%;
+    width:100%;
+}
+.outerBoxhome{
+    background-color: dimgray;
+    opacity: 0.9;
+    width: 250px;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.parallax1 {
+    /* The image used https://2o34683axl001lupaf2udyvl-wpengine.netdna-ssl.com/wp-content/uploads/SoftWhite_Edited_2018.jpg*/
+    background-image: url("https://2o34683axl001lupaf2udyvl-wpengine.netdna-ssl.com/wp-content/uploads/SoftWhite_Edited_2018.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("https://cdn.lolwot.com/wp-content/uploads/2015/08/20-captivatingly-beautiful-locations-across-america-2.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header nav ul li.navRight{
+    list-style-type: none;
+    font-family: Didot;
+    font-size: 15px;
+    display: inline;
+    word-spacing: 2em;
+    color:black;
+
+    top: 0px;
+    float:right;
+
+
+}
+
+body {
+
+    margin:0px;
+
+}
+nav {
+    /*border: black solid 5px;*/
+    /*display:inline-block;*/
+}
+nav ul li img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0px; !important;
+    float:left; !important
+
+}
+/*
+.homeSections{
+    /*display:inline-block;
+    position:relative;
+    top:100px;
+    background-color: pink;
+
+    padding-left:0;
+    padding-right:0;
+    border:0;
+    margin:0;
+    float: left;
+    width: 33.33%;
+    background-color: pink;
+}*/
+
+footer{
+    position:fixed;
+    bottom:0;
+}
+
+
