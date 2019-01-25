@@ -61,7 +61,7 @@
                 <ul class="collapsible">
                     <li class="active">
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>Season</div>
-                        <div class="collapsible-body"><span class="white-text">Hey cutie, choose a season.<br><br></span>
+                        <div class="collapsible-body"><span class="white-text">Choose a season.<br><br></span>
                             <div class="collection">
                                 <a id="summer" href="#!summer" onclick="addActive('#summer')" class="collection-item active">Summer</a>
                                 <a id="winter" href="#!winter" onclick="addActive('#winter')" class="collection-item ">Winter</a>
@@ -82,7 +82,7 @@
                     <span class="black-text" style="font-family:Didot">The process is simple. Just choose a season from the drop down,
                         followed by the occasion and audience size. From here, we'll look for videos that fit. <br> <br>
                     </span>
-                    <div class="center"><a class="waves-effect waves-light btn" onclick="runQuery()">Ready</a></div>
+                    <div class="center"><a id="ready" class="waves-effect waves-light btn" onclick="runQuery()">Ready</a></div>
 
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <ul class="collapsible">
                     <li class="active">
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>Occasion</div>
-                        <div class="collapsible-body"><span>What's up? <br><br></span>
+                        <div class="collapsible-body white-text"><span>What's the Occasion? <br><br></span>
                             <div class="collection">
                                 <a id="anniv" href="#!summer" onclick="addActive2('#anniv')" class="collection-item active">Anniversary</a>
                                 <a id="date" href="#!winter" onclick="addActive2('#date')" class="collection-item ">First date</a>
@@ -107,7 +107,7 @@
 </div>
 <!-- parallax 3 -->
 <div id="para3" class="parallax-container">
-    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <div class="parallax"><img src="https://images.pexels.com/photos/959323/pexels-photo-959323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Snow"></div>
     <h4 style="font-family: Didot"> Vids by the Season</h4>
     <div id="search-container" class="row">
         <!--<div class="s12 m4 l4" style="z-index:1000 !important">
@@ -117,7 +117,7 @@
 </div>
 <!-- parallax 4 -->
 <div id="para4" class="parallax-container">
-    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
+    <div class="parallax"><img src="https://images.pexels.com/photos/959323/pexels-photo-959323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Snow"></div>
     <h4 style="font-family: Didot"> Vids by the Occasion </h4>
     <div>
         <div id="search-container2" class="row">
@@ -127,19 +127,7 @@
         </div>
     </div>
 </div>
-<!-- parallax 5 -->
-<div id="para5" class="parallax-container">
-    <div class="parallax"><img src="https://www.techexplorist.com/wp-content/uploads/2018/08/vacation.jpg" alt="Snow"></div>
-    <h4 style="font-family: Didot"> Vids by the Occasion </h4>
-    <div>
-        <div id="search-container3" class="row">
-            <!--<div class="s12 m4 l4" style="z-index:1000 !important">
-                <iframe id="myIframe" width="360" height="215" src="" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
-            </div>-->
-        </div>
-    </div>
-</div>
-<div id=""></div>
+
 <script>
     $(document).ready(function(){
         $('.parallax').parallax();
@@ -147,72 +135,18 @@
     });
 </script>
 
-
-
-
-
-
-<!--
-<div class="container">
-    <img class="homeImg" src="https://youngisland.com/wp-content/uploads/2018/01/aerial-optimized2.jpg" alt="Snow" style="width:100%;">
-    <div style="font-size:25px" class="top-right text">Rendez</div>
-    <div class="top-left" style="width:390px;font-size:50px;font-family:Didot;top:100px;"><p align="left">An anniversary. <br>A first date.<br> A getaway.</p></div>
-    <div class="top-left">Logo will go here</div>
-
-    <div class="outerBoxhome centered">
-        <p style="color:white;font-size:20px" class="text">Scroll for Inspiration</p>
-    </div>
-
-</div>
-
-<div class="container">
-    <div class="parallax1">
-        <p class="centered sections">Rendez helps you find destination inspiration. <br> Begin your travel fixation!</p>
-        <div class="sectionImg top-left" style="left:220px !important; top:45px !important">
-            <img src="images/coconut%20(1).png">
-            <p class="top-left" style="color:black;position:relative;top:110px;left:-15px">Influencer eats</p>
-            <p class="top-left" style="color:black;position:relative;top:110px;left:-15px">Influencer eats</p>
-        </div>
-        <div class="sectionImg centered" style="top: 80px !Important;">
-            <img style="float:left" src="images/gps%20(1).png">
-        </div>
-        <div class="sectionImg top-right" style="right:220px !important;top:45px !important">
-            <img style="float:left" src="images/coffee.png">
-        </div>
-
-    </div>
-</div>
-
-<div class="container">
-    <div class="parallax2">
-        <p class="centered">So I'm a paragraph</p>
-        <button type="button" id="getvid" >Generate feed</button>
-        <h4>Latest Videos</h4>
-
-        <div id="search-container" style="z-index:1000 !important">
-            <!--<iframe id="myIframe" width="560" height="315" src="hgf" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" ></iframe>
-        </div>
-
-    </div>
-
-</div>
--->
 <script>
     var currSeason;
     var currOccasion;
+
     $(document).ready(function() {
-        //$(document).on('click', '#getvid', searchByKeyword());
-        //$("#getvid").click(searchByKeyword());
-
-
-        // GetRandomBackground();
-        // Load the pexels api
-        UsePexelsAPI();
+        //UsePexelsAPI();
         initialSetup();
 
     });
 
     function runQuery(){
+        $('#ready').addClass("disabled");
         // Loads the JavaScript client library and invokes `start` afterwards.
         gapi.load('client', {
             callback: function() {
